@@ -1,25 +1,23 @@
 package cinetPtest;
 
 public class TestMethode {
-
+	 static int number =0;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String[] monTableau = new String[] {"Un", "Deux", "cela"};
 		
-		System.out.println(rechercheProbleme1(monTableau ,"cela", 0, 2)); 
-		System.out.println(countOccurence("Deux" ,'a', 1));
+		System.out.println(rechercheProbleme1(monTableau ,"cela", 1, 3)); 
+		System.out.println(countOccurence("Deux" ,'e', 2));
+		
 	}
 	
 	private static int rechercheProbleme1(String[] book ,String word, int start, int end) {
-		int number =-1;
-		if(start>end) return -1;
-		
+		if(start>end) { return -1;}
 		double mid = Math.floor((start+end)/2);
-		
 		if(book[(int) mid] == word) {
-			if(number==-1) number=0;
-			number = number++;
+			return ++number;
 		}
+		//}
 		if(word.equals(book[(int) mid]))
 			 rechercheProbleme1(book, word, start, (int) (mid-1));
 		else
