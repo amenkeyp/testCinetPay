@@ -4,10 +4,13 @@ public class TestMethode {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		String[] monTableau = new String[] {"Un", "Deux", "cela"};
+		
+		System.out.println(rechercheProbleme1(monTableau ,"cela", 0, 2)); 
+		System.out.println(countOccurence("Deux" ,'a', 1));
 	}
 	
-	private int rechercheProbleme1(String[] book ,String word, int start, int end) {
+	private static int rechercheProbleme1(String[] book ,String word, int start, int end) {
 		int number =-1;
 		if(start>end) return -1;
 		
@@ -31,8 +34,7 @@ public class TestMethode {
 	if(count ==0) {}else {
 		int position =someString.charAt(index)+1;
 		tab[position]=searchedChar;
-	}
-	
+	}	
 	word(tab);
 	return count + countOccurence(someString, searchedChar, index+1);
 	}
